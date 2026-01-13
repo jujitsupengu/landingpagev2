@@ -129,6 +129,9 @@
   .timeline-card {
     padding: 2rem;
   }
+}
+
+.timeline-card {
   transition: all 0.3s ease;
 }
 
