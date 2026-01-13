@@ -1,16 +1,19 @@
 <template>
-  <section class="hero-section w-full min-h-screen flex flex-col items-center justify-center px-6 py-24">
-    <div class="max-w-5xl mx-auto">
-      <!-- Hero Content Container - constrained width, centered -->
+  <section class="hero-section">
+    <!-- Main Content Region - vertically centered -->
+    <div class="hero-main">
       <div class="hero-content">
-        <!-- Main Headline -->
-        <h1 class="hero-headline text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight tracking-tight">
+        <!-- Company Name - Primary brand element -->
+        <h1 class="company-name">Posterity Labs</h1>
+
+        <!-- Tagline -->
+        <p class="hero-tagline">
           AI Workflow Optimization
-          <span class="block mt-2">Built for Results</span>
-        </h1>
+          <span class="block">Built for Results</span>
+        </p>
 
         <!-- Subheadline -->
-        <p class="hero-subtext text-lg md:text-xl text-gray-400 mb-12 leading-relaxed font-light">
+        <p class="hero-subtext">
           We reduce operational inefficiencies through custom AI agents, prompt engineering,
           and n8n automation. Cut onboarding time, automate content production, and scale your business.
         </p>
@@ -20,8 +23,10 @@
           See How It Works
         </button>
       </div>
+    </div>
 
-      <!-- Quick Stats -->
+    <!-- Stats Region - anchored to bottom -->
+    <div class="hero-stats">
       <div class="stats-container">
         <div class="stat-item">
           <div class="stat-number">80%</div>
@@ -45,27 +50,64 @@
 </script>
 
 <style scoped>
-/* Hero Content Container - centered with constrained width */
+/* Hero Section - CSS Grid with two regions */
+.hero-section {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 1.5rem;
+}
+
+/* Main Content Region - centers its content */
+.hero-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 900px;
   text-align: center;
 }
 
-.hero-headline {
+/* Company Name - Dominant brand element */
+.company-name {
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 1.5rem;
   background: linear-gradient(135deg, #ff006e 0%, #8338ec 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.hero-subtext {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+/* Tagline - Secondary to company name */
+.hero-tagline {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
 }
 
-/* CTA Button - Clean SaaS style */
+.hero-tagline span {
+  display: block;
+}
+
+/* Subtext */
+.hero-subtext {
+  font-size: 1.125rem;
+  color: #9ca3af;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* CTA Button */
 .cta-button {
   display: inline-block;
   padding: 16px 40px;
@@ -86,14 +128,17 @@
               0 4px 20px rgba(131, 56, 236, 0.3);
 }
 
-/* Stats Container - Horizontal 3-column layout */
+/* Stats Region */
+.hero-stats {
+  padding: 3rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 .stats-container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin-top: 6rem;
-  padding-top: 4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  align-items: center;
+  gap: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -104,16 +149,16 @@
   }
 }
 
-/* Stat Items - Clean and minimal */
+/* Stat Items */
 .stat-item {
   text-align: center;
 }
 
 .stat-number {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   background: linear-gradient(135deg, #ff006e 0%, #8338ec 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -122,15 +167,15 @@
 
 @media (min-width: 768px) {
   .stat-number {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
 .stat-label {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #9ca3af;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
 }
 </style>
