@@ -1,5 +1,5 @@
 <template>
-  <section class="services-section py-20 px-6">
+  <section id="services" class="services-section py-20 px-6">
     <div class="max-w-6xl mx-auto">
       <!-- Section Header -->
       <div class="section-header text-center mb-12">

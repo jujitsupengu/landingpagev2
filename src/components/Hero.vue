@@ -19,7 +19,7 @@
         </p>
 
         <!-- CTA Button -->
-        <button class="cta-button">
+        <button class="cta-button" @click="scrollToServices">
           See How It Works
         </button>
       </div>
@@ -46,7 +46,12 @@
 </template>
 
 <script setup>
-// Hero component logic
+const scrollToServices = () => {
+  const servicesSection = document.getElementById('services')
+  if (servicesSection) {
+    servicesSection.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
 
 <style scoped>
