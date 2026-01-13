@@ -2,11 +2,9 @@
   <section id="services" class="services-section py-20 px-6">
     <div class="max-w-6xl mx-auto">
       <!-- Section Header -->
-      <div class="section-header text-center mb-12">
-        <h2 class="section-title text-4xl md:text-5xl font-bold mb-6">
-          What We Do
-        </h2>
-        <p class="section-subtitle text-lg text-gray-400 max-w-2xl mx-auto">
+      <div class="section-header">
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-subtitle">
           We combine AI expertise with automation to transform how your business operates.
         </p>
       </div>
@@ -65,22 +63,8 @@
 </script>
 
 <style scoped>
-/* Section Header - centered */
-.section-header {
-  text-align: center;
-}
-
-.section-title {
-  background: linear-gradient(135deg, #ff006e 0%, #8338ec 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.section-subtitle {
-  margin-left: auto;
-  margin-right: auto;
-}
+/* NOTE: .section-header, .section-title, .section-subtitle
+   styles are defined globally in style.css */
 
 /* Services Grid - 3 columns on desktop */
 .services-grid {

@@ -21,3 +21,37 @@ body {
 #app {
   width: 100%;
 }
+
+/* ===========================================
+   GLOBAL SECTION PATTERNS
+
+   These rules prevent recurring alignment issues.
+   All section headers should use .section-header class.
+   Do NOT override text-align in component scoped styles.
+   =========================================== */
+
+/* Section headers are always centered */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Section titles get gradient treatment */
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ff006e 0%, #8338ec 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section subtitles are centered with constrained width */
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #9ca3af;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
