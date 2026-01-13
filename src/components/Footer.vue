@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="footer-container">
+    <div class="footer-container reveal">
       <div class="footer-content">
         <!-- Brand -->
         <div class="footer-brand">

@@ -1,7 +1,7 @@
 <template>
   <section id="cta" class="cta-section">
     <div class="cta-container">
-      <div class="cta-content">
+      <div class="cta-content reveal">
         <h2 class="cta-title">Ready to Automate Your Growth?</h2>
         <p class="cta-text">
           Stop losing time to manual processes. Let's build the systems that scale your business.

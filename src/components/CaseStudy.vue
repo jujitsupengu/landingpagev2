@@ -2,7 +2,7 @@
   <section id="case-study" class="case-study-section">
     <div class="max-w-6xl mx-auto px-6">
       <!-- Section Header -->
-      <div class="section-header">
+      <div class="section-header reveal">
         <p class="section-label">Case Study</p>
         <h2 class="section-title">From Manual Chaos to Automated Growth</h2>
         <p class="section-subtitle">
@@ -11,7 +11,7 @@
       </div>
 
       <!-- Case Study Timeline -->
-      <div class="case-study-timeline">
+      <div class="case-study-timeline reveal">
         <!-- Before -->
         <div class="timeline-card before-card">
           <div class="card-label">Before</div>

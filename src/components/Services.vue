@@ -2,7 +2,7 @@
   <section id="services" class="services-section py-20 px-6">
     <div class="max-w-6xl mx-auto">
       <!-- Section Header -->
-      <div class="section-header">
+      <div class="section-header reveal">
         <h2 class="section-title">What We Do</h2>
         <p class="section-subtitle">
           We combine AI expertise with automation to transform how your business operates.
@@ -10,7 +10,7 @@
       </div>
 
       <!-- Services Grid -->
-      <div class="services-grid">
+      <div class="services-grid reveal">
         <!-- Service 1: AI Workflow Optimization -->
         <div class="service-card">
           <div class="service-icon">

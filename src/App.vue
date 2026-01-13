@@ -14,6 +14,9 @@ import Services from './components/Services.vue'
 import CaseStudy from './components/CaseStudy.vue'
 import CTA from './components/CTA.vue'
 import Footer from './components/Footer.vue'
+import { useScrollReveal } from './composables/useScrollReveal'
+
+useScrollReveal()
 </script>
 
 <style scoped>
