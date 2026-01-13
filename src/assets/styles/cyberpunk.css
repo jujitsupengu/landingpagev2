@@ -1,0 +1,107 @@
+/* Cyberpunk Tech Effects */
+
+/* Grid Background Pattern */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 0, 110, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(131, 56, 236, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+}
+
+/* Scanline Overlay Effect */
+.scanlines {
+  position: relative;
+}
+
+.scanlines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 3px
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.scanlines > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Glow Effects */
+.glow-pink {
+  box-shadow: 0 0 10px rgba(255, 0, 110, 0.5),
+              0 0 20px rgba(255, 0, 110, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 10px rgba(131, 56, 236, 0.5),
+              0 0 20px rgba(131, 56, 236, 0.3);
+}
+
+.glow-pink-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-pink-hover:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 110, 0.7),
+              0 0 30px rgba(255, 0, 110, 0.5),
+              0 0 45px rgba(255, 0, 110, 0.3);
+}
+
+.glow-purple-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-purple-hover:hover {
+  box-shadow: 0 0 15px rgba(131, 56, 236, 0.7),
+              0 0 30px rgba(131, 56, 236, 0.5),
+              0 0 45px rgba(131, 56, 236, 0.3);
+}
+
+/* Terminal Box Style */
+.terminal-box {
+  border: 1px solid rgba(255, 0, 110, 0.3);
+  background: rgba(20, 20, 25, 0.8);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.terminal-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(131, 56, 236, 0.2);
+  pointer-events: none;
+}
+
+/* Subtle Grain Texture */
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 100;
+  mix-blend-mode: overlay;
+}
