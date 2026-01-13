@@ -1,6 +1,6 @@
 <template>
   <section id="case-study" class="case-study-section">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
       <!-- Section Header -->
       <div class="section-header reveal">
         <p class="section-label">Case Study</p>
@@ -79,8 +79,14 @@
 
 <style scoped>
 .case-study-section {
-  padding: 6rem 0;
+  padding: 4rem 1rem;
   background: linear-gradient(180deg, transparent 0%, rgba(255, 0, 110, 0.02) 50%, transparent 100%);
+}
+
+@media (min-width: 480px) {
+  .case-study-section {
+    padding: 6rem 1.5rem;
+  }
 }
 
 /* Section Label (component-specific) */
@@ -113,10 +119,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1.5rem;
   background: rgba(20, 20, 25, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+  .timeline-card {
+    padding: 2rem;
+  }
   transition: all 0.3s ease;
 }
 

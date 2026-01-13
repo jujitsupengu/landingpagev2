@@ -30,8 +30,14 @@ const scrollToServices = () => {
 
 <style scoped>
 .cta-section {
-  padding: 6rem 1.5rem;
+  padding: 4rem 1rem;
   background: linear-gradient(180deg, transparent 0%, rgba(131, 56, 236, 0.05) 50%, transparent 100%);
+}
+
+@media (min-width: 480px) {
+  .cta-section {
+    padding: 6rem 1.5rem;
+  }
 }
 
 .cta-container {
@@ -66,13 +72,19 @@ const scrollToServices = () => {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 @media (min-width: 480px) {
   .cta-buttons {
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    max-width: none;
+    width: auto;
   }
 }
 
@@ -86,6 +98,7 @@ const scrollToServices = () => {
   border: none;
   border-radius: 8px;
   text-decoration: none;
+  text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(255, 0, 110, 0.3);
@@ -105,6 +118,7 @@ const scrollToServices = () => {
   color: #e0e0e0;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;

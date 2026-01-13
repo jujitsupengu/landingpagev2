@@ -61,7 +61,13 @@ const scrollToServices = () => {
   grid-template-rows: 1fr auto;
   min-height: 100vh;
   width: 100%;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 480px) {
+  .hero-section {
+    padding: 2rem 1.5rem;
+  }
 }
 
 /* Main Content Region - centers its content */
@@ -115,8 +121,8 @@ const scrollToServices = () => {
 /* CTA Button */
 .cta-button {
   display: inline-block;
-  padding: 16px 40px;
-  font-size: 1.125rem;
+  padding: 14px 32px;
+  font-size: 1rem;
   font-weight: 600;
   color: white;
   background: linear-gradient(135deg, #ff006e 0%, #8338ec 100%);
@@ -125,6 +131,13 @@ const scrollToServices = () => {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 20px rgba(255, 0, 110, 0.3);
+}
+
+@media (min-width: 640px) {
+  .cta-button {
+    padding: 16px 40px;
+    font-size: 1.125rem;
+  }
 }
 
 .cta-button:hover {

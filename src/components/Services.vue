@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="services-section py-20 px-6">
+  <section id="services" class="services-section py-16 px-4 sm:py-20 sm:px-6">
     <div class="max-w-6xl mx-auto">
       <!-- Section Header -->
       <div class="section-header reveal">
@@ -82,12 +82,18 @@
 
 /* Service Card */
 .service-card {
-  padding: 2.5rem 2rem;
+  padding: 1.5rem 1.25rem;
   background: rgba(20, 20, 25, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   text-align: center;
   transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .service-card {
+    padding: 2.5rem 2rem;
+  }
 }
 
 .service-card:hover {
